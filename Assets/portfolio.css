@@ -1,0 +1,607 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+:root {
+    --primary: #000000;
+    --secondary: #ffffff;
+    --accent: rgba(255, 244, 97, 0.973);
+    --links: rgb(97, 134, 255);
+    --navbg: conic-gradient(red,blue,green)
+}
+
+body{
+    background: rgb(7, 13, 75);
+    justify-items: center;
+}
+
+h1 {
+    font-family: "lora", serif;
+    color: var(--secondary);
+    font-size: 4rem;
+    margin-bottom: 20px;
+    display: block;
+    z-index: 1;
+}
+
+.header{
+    height: 10%;
+    width: inherit;
+    padding: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding-left: 0px;
+}
+
+/* Nav-section */
+
+.navbar-box {
+    height: 6vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    animation: fadeinDown 1s ease;
+}
+
+.navbar {
+    height: 6vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0 auto;
+    gap: 20px;
+    position: relative;
+    opacity: 1;
+    color: var(--secondary);
+    background: rgba(0, 0, 0, 0.938);
+}
+
+.navbar::before,
+.navbar::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(
+        red,
+        blue,
+        green
+    );
+    border-radius: inherit;
+    z-index: -2;
+    padding: 5px;
+}
+
+.navbar::after{
+    filter: blur(10px);
+}
+
+
+@keyframes fadeinDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding-right: 40px;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: normal;
+}
+
+.nav-links a:hover {
+    color: var(--links);
+    font-weight: bold;
+}
+
+.logo{
+    filter: invert(1);
+}
+
+/* About-section */
+
+.about-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-box{
+    height: 50vh;
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: 1;
+    background: black;
+    border-radius: 20px;
+}
+
+.about-box::before,
+.about-box::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(
+        #00c3ff,
+        #4d0199,
+        #6300c6,
+        #009dcd,
+        #00c3ff
+    );
+    border-radius: inherit;
+    z-index: -2;
+    padding: 5px;
+}
+
+.about-box::after{
+    filter: blur(20px);
+}
+
+.about-content{
+    display: inline;
+    height: inherit;
+    width: inherit;
+    color: white;
+    padding: 5%;
+    gap: 5%;
+}
+
+.about-data{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: -2%;
+    margin: -2%;
+    gap: 15%;
+}
+.text{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    margin: 2%;
+}
+
+.about-image{
+    height: 200px;
+    aspect-ratio: 1/1;
+    /* align-items: end; */
+
+}
+.image{
+    height: 100%;
+    border-radius: 10px;
+    align-self: end;
+}
+
+/* Skills-section */
+
+.skills-container{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: 1;
+    background: black;
+    border-radius: 20px;
+}
+
+.box::before,
+.box::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(
+        #00c3ff,
+        #4d0199,
+        #6300c6,
+        #009dcd,
+        #00c3ff
+    );
+    border-radius: inherit;
+    z-index: -2;
+    padding: 5px;
+}
+
+.box::after{
+    filter: blur(11px);
+}
+
+.skills-content{
+    display: inline;
+    height: inherit;
+    width: inherit;
+    color: white;
+    padding: 5%;
+    gap: 5%;
+}
+
+/* Services-section */
+
+.services-container{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-content{
+    display: inline;
+    height: inherit;
+    width: inherit;
+    color: white;
+    padding: 5%;
+    gap: 5%;
+}
+
+/* Contact-section */
+
+.contact-container{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content{
+    display: inline;
+    height: inherit;
+    width: inherit;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 5%;
+    margin: 2%;
+    gap: 5%;
+}
+
+.contact-box{
+    height: 70%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: 1;
+    background: black;
+    border-radius: 20px;
+}
+
+.contact-box::before,
+.contact-box::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(
+        #00c3ff,
+        #4d0199,
+        #6300c6,
+        #009dcd,
+        #00c3ff
+    );
+    border-radius: inherit;
+    z-index: -2;
+    padding: 5px;
+}
+
+.contact-box::after{
+    filter: blur(11px);
+}
+
+.contact-icons{
+    height: 50px;
+    aspect-ratio: 1/1;
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.contact-icons:hover{
+    transform: translatey(-5px);
+    transition: all 0.5s ease-in-out;
+    filter: invert(1) drop-shadow(0 0 10px white);
+}
+
+/* Cards section */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    gap: 5%;
+}
+
+.card-content{
+    height: 110px;
+    aspect-ratio: 1/1;
+    background: conic-gradient(
+        #00c3ff,
+        #4d0199,
+        #6300c6,
+        #009dcd,
+        #00c3ff
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2%;
+    margin: 2%;
+    transition: all 0.5s ease-in-out;
+    border-radius: 50% ;
+}
+
+.card-content:hover{
+    background: conic-gradient(
+        from 30deg at 30% 50%,
+        #A100FFFF 0%,
+        #000000 25%,
+        #119CFDFF 40%
+    );
+    color: whitesmoke;
+    transform: translatey(-5px);
+    filter: drop-shadow(0 0 10px white);
+}
+
+@keyframes card-moving {
+    from {
+    transform: translatey(0px);
+    }
+    to {
+    transform: translatey(-20px);
+    }
+}
+p{
+    color: var(--secondary);
+    font-size: 1.2rem;
+}
+
+.cards a{
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 4%;
+}
+
+
+/* Media Query */
+
+@media screen and (min-width: 850px ) and (max-width: 1080px) {
+    .about-box{
+        width: 90vw;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    .card-content{
+        height: 90px;
+    }
+    .contact-icons{
+        height: 40px;
+    }
+    .cards a{
+        margin: 2%;
+    }
+    .about-image{
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 650px ) and (max-width: 849px) {
+    .about-box{
+        width: 80vw;
+        height: 50vh;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    .cards{
+        gap: 5%;
+    }
+    .card-content{
+        height:100px;
+    }
+    .contact-icons{
+        height: 40px;
+    }
+    .cards a{
+        margin: 2%;
+    }
+    .skills-container{
+        height: 90vh;
+        width: 90%;
+    }
+    .services-container{
+        height: 60vh;
+        width: 90%;
+    }
+    .contact-container{
+        height: 60vh;
+        width: 90%;
+    }
+    .about-image{
+        height: 125px;
+    }
+}
+
+@media screen and (min-width: 596px ) and (max-width: 649px) {
+    .about-box{
+        width: 80vw;
+        height: 50vh;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+    p{
+        font-size: 14px;
+    }
+    .about-image{
+        height: 150px;
+    }
+    .cards{
+        gap: 5%;
+    }
+    .card-content{
+        height: 95px;
+    }
+    .contact-icons{
+        height: 40px;
+    }
+    .cards a{
+        margin: 2%;
+    }
+    .skills-container{
+        height: 90vh;
+        width: 90%;
+    }
+    .services-container{
+        height: 60vh;
+        width: 90%;
+    }
+    .contact-container{
+        height: 60vh;
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 450px ) and (max-width: 595px) {
+    .about-box{
+        width: 80vw;
+        height: 50vh;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+    p{
+        font-size: 14px;
+    }
+    .about-image{
+        height: 150px;
+    }
+    .cards{
+        gap: 5%;
+    }
+    .card-content{
+        height: 95px;
+    }
+    .contact-icons{
+        height: 40px;
+    }
+    .cards a{
+        margin: 2%;
+    }
+    .skills-container{
+        height: 90vh;
+        width: 90%;
+    }
+    .services-container{
+        height: 80vh;
+        width: 90%;
+    }
+    .contact-container{
+        height: 60vh;
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 150px ) and (max-width: 449px) {
+    .about-content{
+        gap: 0;
+        padding-top: 5%;
+        padding-left: -1%;
+    }
+    .about-box{
+        margin-top: 10vh;
+        width: 60vw;
+        height: 50vh;
+    }
+    .about-data{
+        flex-direction: column-reverse;
+
+    }
+    h1{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 12px;
+    }
+    .about-image{
+        margin-top: 30%;
+        height: 150px;
+    }
+    .cards{
+        gap: 5%;
+    }
+    .card-content{
+        height: 95px;
+    }
+    .contact-icons{
+        height: 30px;
+    }
+    .cards a{
+        margin: 0%;
+    }
+    .skills-container{
+        height: 40vh;
+        width: 90%;
+    }
+    .services-container{
+        height: 40vh;
+        width: 90%;
+    }
+    .contact-container{
+        height: 20vh;
+        width: 90%;
+    }
+}
